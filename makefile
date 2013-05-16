@@ -1,2 +1,2 @@
 all:
-  g++ gameobject.cpp mapitem.cpp starsystem.cpp fleet.cpp sample.cpp -o current_build
+	g++ ./server/gameobject.cpp ./server/mapitem.cpp ./server/starsystem.cpp ./server/fleet.cpp ./server/sample.cpp -o current_build
