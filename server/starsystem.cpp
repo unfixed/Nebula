@@ -1,4 +1,4 @@
-#include<stack>
+#include<iostream>
 #include "mapitem.h"
 #include "fleet.h"
 #include "starsystem.h"
@@ -13,7 +13,6 @@ StarSystem::StarSystem(int input_id, std::string input_name, int input_resources
   setLocation(input_location_x, input_location_y);
   setSize(0);
   setOwner(input_owner_id);
-  //Fleets = new Fleets [1];  //TODO: modify to stack
 
 }
 
@@ -32,13 +31,19 @@ void StarSystem::setResources(int input_resources)
 
 void StarSystem::addFleet(Fleet& input_fleet)
 {
-  //TODO: implement stack
-  int b =0;
+  fleets.insert(std::pair<int,Fleet>(input_fleet.getID(),input_fleet) );
+
+
+  cout << "added fleet with id " << input_fleet.getID() << endl;
 }
 
 void StarSystem::removeFleet(int input_id_fleet)
 {
-  //TODO: implement stack manipulation code, to remove a 
-  int a = 0;
+  fleets.erase(input_id_fleet);
+  cout << "removed fleet with id " << input_id_fleet << endl;
+}
 
+void StarSystem::getFleets(std::map<int,Fleet>& input_fleets)
+{
+  input_fleets = fleets;
 }

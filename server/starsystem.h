@@ -1,3 +1,6 @@
+#pragma once
+#include <map>
+
 class StarSystem : public MapItem
 
 {
@@ -9,11 +12,11 @@ public:
   void setResources(int input_resources);
   void addFleet(Fleet& input_fleet);
   void removeFleet(int input_id_fleet);
-
+  void getFleets(std::map<int,Fleet>& input_fleets);
 private:
   int resources;
   //stack of all fleets within starsystem
-  //std::stack<Fleet> fleets;
+  std::map<int,Fleet> fleets;
 
   // calculates the total number of ships within the starsystem
   //void calcShipTotal();

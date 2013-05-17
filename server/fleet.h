@@ -1,3 +1,4 @@
+#pragma once
 #include <string>
 #include "mapitem.h"
 
@@ -5,7 +6,11 @@ class Fleet : public MapItem
 
 {
 public:
+  Fleet();
   Fleet(int input_id, std::string input_name, int input_size, int input_location_x, int input_location_y, int input_owner_id);
+
+  Fleet& operator= (Fleet& input_fleet);
+
 
   //TODO: create algorithm to map a fleet's location if in jump.
   void getLocation(int& input_location_x, int& input_location_y);
