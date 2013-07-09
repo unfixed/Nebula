@@ -4,24 +4,24 @@
 #include "gameobject.h"
 #include "starsystem.h"
 
-class Map : public GameObject
+class GameMap : public GameObject
 
 {
 public:
-  Map(int id, int size_x, int size_y);
+  GameMap(int id, int size_x, int size_y);
 
-  void getStarSystemList(std::map<StarSystem>& output_starsystem_list);
+  void getStarSystemList(std::map<int,StarSystem>& output_starsystem_list);
   void getSize(int& input_size_x, int& input_size_y);
 
-  void setStarSystemList(const std::map<StarSystem>& input_starsystem_list);
+  void setStarSystemList(const std::map<int,StarSystem>& input_starsystem_list);
   void setSize(int input_size_x, int input_size_y);
 
 private:
-  void generateMap();
+  void generateGameMap();
   void addStarSystem(StarSystem& input_starsystem);
 
   int size_x;
   int size_y;
-  std::map<StarSystem> starsystem_list;
+  std::map<int,StarSystem> starsystem_list;
 
 };
