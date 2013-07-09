@@ -1,8 +1,9 @@
 #pragma once
 #include <map>
+#include "fleet.h"
+
 
 class StarSystem : public MapItem
-
 {
 public:
   StarSystem(int input_id, std::string input_name, int input_resources, int input_location_x, int input_location_y, int input_owner_id);
