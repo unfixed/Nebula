@@ -37,16 +37,7 @@ void GameMap::addStarSystem(StarSystem& input_starsystem)
 void GameMap::generateGameMap()
 {
   //TODO: create algorithm for GameMap generation
-  // 200 == 1 lightyear, stars should never be more than 300 from its nearest star
-  // star systems should never be closer than 50
-
-  rand() % 200;
-
-  rand() % size_x;
-  rand() % size_y;
+  rand()
 }
 
-void GameMap::detectIfStarTooNear(StarSystem& input_starsystem)
-{
-//  starsystem_list.at(
-}
+

@@ -18,6 +18,7 @@ public:
 
 private:
   void generateGameMap();
+  void detectIfStarTooNear(StarSystem& input_starsystem);
   void addStarSystem(StarSystem& input_starsystem);
 
   int size_x;

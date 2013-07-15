@@ -34,7 +34,7 @@ void StarSystem::addFleet(Fleet& input_fleet)
   fleets.insert(std::pair<int,Fleet>(input_fleet.getID(),input_fleet) );
 
 
-  cout << "added fleet with id " << input_fleet.getID() << endl;
+//  cout << "added fleet with id " << input_fleet.getID() << endl;
 }
 
 void StarSystem::removeFleet(int input_id_fleet)
