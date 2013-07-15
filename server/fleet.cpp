@@ -72,9 +72,9 @@ void Fleet::completedFleetOrder()
   fleet_orders.pop_front();
 }
 
-void getShipsFromStar(int input_number_of_ships)
+void Fleet::getShipsFromStar(int input_number_of_ships)
 
 {
 //TODO: IMplement getting ships from star
-
+return;
 }
